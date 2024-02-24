@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
 
 import { addContact } from '../../redux/contacts/slice';
-import { selectContacts } from '../../redux/contacts/selector';
+import { selectContacts } from '../../redux/selectors';
 import {
   Form,
   FormGroup,
