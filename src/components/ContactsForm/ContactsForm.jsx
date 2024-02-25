@@ -22,6 +22,21 @@ const ContactsForm = () => {
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
+  const onFormSubmit = (values, actions) => {
+    const nameToAdd = values.name.toLowerCase();
+    const nameInList = contacts.find(contact => {
+      return contact.name.toLowerCase() === nameToAdd;
+    });
+
+    if (nameInList) {
+      return alert(`Contact ${nameToAdd} in the list`);
+    }
+
+    values.id = nanoid();
+    dispatch(addContact(values));
+    actions.resetForm();
+  };
+
   return (
     <div>
       <Formik
@@ -31,20 +46,7 @@ const ContactsForm = () => {
           phone: '',
         }}
         validationSchema={contactSchema}
-        onSubmit={(values, actions) => {
-          const nameToAdd = values.name.toLowerCase();
-          const nameInList = contacts.find(contact => {
-            return contact.name.toLowerCase() === nameToAdd;
-          });
-
-          if (nameInList) {
-            return alert(`Contact ${nameToAdd} in the list`);
-          }
-
-          values.id = nanoid();
-          dispatch(addContact(values));
-          actions.resetForm();
-        }}
+        onSubmit={onFormSubmit}
       >
         <Form autoComplete="off">
           <FormGroup>
