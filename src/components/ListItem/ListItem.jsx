@@ -20,6 +20,7 @@ const ListItem = ({ contact: { id, name, phone } }) => {
 
 ListItem.propTypes = {
   contact: PropTypes.exact({
+    createdAt: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     phone: PropTypes.string.isRequired,
