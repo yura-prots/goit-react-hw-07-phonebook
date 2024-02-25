@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchContacts } from '../../redux/operations';
+import { fetchContacts, addContact } from '../../redux/operations';
 
 export const contactsSlice = createSlice({
   name: 'contacts',
@@ -12,7 +12,8 @@ export const contactsSlice = createSlice({
     builder.addCase(fetchContacts.fulfilled, (state, action) => {
       state.items = action.payload;
     });
+    builder.addCase(addContact.fulfilled, (state, action) => {
+      state.items.push(action.payload);
+    });
   },
 });
-
-export const { addContact, deleteContact } = contactsSlice.actions;

@@ -1,9 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Formik } from 'formik';
-import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
 
-import { addContact } from '../../redux/contacts/slice';
+import { addContact } from '../../redux/operations';
 import { selectContacts } from '../../redux/selectors';
 import {
   Form,
@@ -32,7 +31,6 @@ const ContactsForm = () => {
       return alert(`Contact ${nameToAdd} in the list`);
     }
 
-    values.id = nanoid();
     dispatch(addContact(values));
     actions.resetForm();
   };
