@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Formik } from 'formik';
+import { toast } from 'react-toastify';
 import * as Yup from 'yup';
 
 import { addContact } from '../../redux/operations';
@@ -28,7 +29,7 @@ const ContactsForm = () => {
     });
 
     if (nameInList) {
-      return alert(`Contact ${nameToAdd} in the list`);
+      return toast.info(`Contact ${nameToAdd} in the list`);
     }
 
     dispatch(addContact(values));

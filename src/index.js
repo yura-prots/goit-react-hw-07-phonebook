@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import App from 'components/App';
 import { GlobalStyle } from './styles/GlobalStyle';
@@ -23,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
+        <ToastContainer />
         <App />
       </ThemeProvider>
     </Provider>
