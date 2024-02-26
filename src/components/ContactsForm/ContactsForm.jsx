@@ -39,7 +39,6 @@ const ContactsForm = () => {
     <div>
       <Formik
         initialValues={{
-          id: '',
           name: '',
           phone: '',
         }}

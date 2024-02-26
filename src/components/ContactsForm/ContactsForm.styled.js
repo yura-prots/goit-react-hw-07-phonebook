@@ -9,7 +9,6 @@ export const Form = styled(FormikForm)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
   gap: 20px;
 `;
 

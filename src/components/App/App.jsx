@@ -27,7 +27,7 @@ const App = () => {
         <DotLoader
           color={'white'}
           loading={isLoading}
-          size={30}
+          size={40}
           aria-label="Loading Spinner"
           data-testid="loader"
         />

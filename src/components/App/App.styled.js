@@ -8,7 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  width: 600px;
+  width: 700px;
   margin-right: auto;
   margin-left: auto;
   padding: 10px;
@@ -24,12 +24,13 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 30px;
+  min-height: 40px;
 `;
 
 export const Title = styled.h2`
   display: block;
   font-weight: 700;
   font-size: 24px;
+  margin-top: 60px;
   margin-bottom: 12px;
 `;
