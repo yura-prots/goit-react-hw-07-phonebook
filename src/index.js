@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import App from 'components/App';
-import { GlobalStyle } from './styles/GlobalStyle';
+import { GlobalStyles } from './styles/GlobalStyles';
 import { store } from './redux/store.js';
 
 const theme = {
@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
+        <GlobalStyles />
         <ToastContainer />
         <App />
       </ThemeProvider>
