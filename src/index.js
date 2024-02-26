@@ -16,7 +16,7 @@ const theme = {
     red: '#FF0000',
     tomato: '#FF6347',
     green: '#90EE90',
-    violet: '#EE82EE',
+    blue: '#59D5E0',
   },
 };
 

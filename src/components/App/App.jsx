@@ -24,7 +24,7 @@ const App = () => {
 
       <Wrapper>
         <DotLoader
-          color={'white'}
+          color={'#5febf9'}
           loading={isLoading}
           size={40}
           aria-label="Loading Spinner"
