@@ -7,7 +7,6 @@ import ContactsFilter from 'components/ContactsFilter';
 import ContactsList from 'components/ContactsList';
 import { selectContacts, selectIsLoading } from '../../redux/selectors';
 import { fetchContacts } from '../../redux/operations';
-
 import { Container, Wrapper, Title } from './App.styled';
 
 const App = () => {
